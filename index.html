@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Interactive flash cards for OMSCS CS 6250 Computer Networks." />
+    <title>CN Field Notes — CS 6250 Flash Cards</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="#" aria-label="CN Field Notes home">
+          <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span><strong>CN</strong> FIELD NOTES</span>
+        </a>
+        <div class="header-meta">
+          <span>CS 6250</span>
+          <span class="status-dot">Study deck online</span>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero" aria-labelledby="page-title">
+          <div class="eyebrow"><span>OMSCS</span> / Computer Networks</div>
+          <h1 id="page-title">Make the network<br /><em>click.</em></h1>
+          <p>Flip through the course question pools, lock in the answer, and keep the hard cards in rotation.</p>
+          <div class="hero-stats">
+            <div><strong id="total-card-count">120</strong><span>questions</span></div>
+            <div><strong id="module-count">03</strong><span>modules</span></div>
+            <div><strong id="mastered-count">0</strong><span>mastered</span></div>
+          </div>
+        </section>
+
+        <section class="study-panel" aria-label="Flash card study area">
+          <aside class="deck-sidebar">
+            <div class="sidebar-heading">
+              <span>Decks</span>
+              <button id="reset-progress" class="text-button" type="button">Reset</button>
+            </div>
+            <nav id="module-nav" class="module-nav" aria-label="Question pool modules"></nav>
+            <div class="sidebar-note">
+              <span>Keyboard</span>
+              <p><kbd>Space</kbd> flip · <kbd>←</kbd><kbd>→</kbd> move · <kbd>M</kbd> master</p>
+            </div>
+          </aside>
+
+          <div class="deck-main">
+            <div class="toolbar">
+              <label class="search-box">
+                <span class="sr-only">Search cards</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m16 16 5 5"></path></svg>
+                <input id="search-input" type="search" placeholder="Search this deck" autocomplete="off" />
+              </label>
+              <label class="topic-select">
+                <span class="sr-only">Filter by topic</span>
+                <select id="topic-filter"><option value="all">All topics</option></select>
+              </label>
+              <button id="shuffle-button" class="icon-button" type="button" title="Shuffle cards" aria-label="Shuffle cards">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 3h5v5M4 20 21 3M21 16v5h-5M15 15l6 6M4 4l5 5"></path></svg>
+              </button>
+            </div>
+
+            <div class="deck-info">
+              <div>
+                <span id="deck-kicker">MODULE 1</span>
+                <h2 id="deck-title">Introduction, History &amp; Internet Architecture</h2>
+              </div>
+              <div class="progress-copy"><span id="current-position">01</span> / <span id="filtered-count">35</span></div>
+            </div>
+
+            <div id="empty-state" class="empty-state" hidden>
+              <span>NO MATCH</span>
+              <h3>No cards found.</h3>
+              <p>Try a different search or topic.</p>
+            </div>
+
+            <article id="flashcard" class="flashcard" tabindex="0" aria-label="Flash card. Press space to reveal the answer.">
+              <div class="card-face card-front">
+                <div class="card-topline">
+                  <span id="question-label">QUESTION 01</span>
+                  <span id="question-type">MCQ</span>
+                </div>
+                <div id="topic-label" class="topic-label">Layering &amp; Architecture</div>
+                <h3 id="question-text"></h3>
+                <figure id="question-figure" class="question-figure" hidden>
+                  <img id="question-image" alt="" />
+                  <figcaption id="image-caption"></figcaption>
+                </figure>
+                <ol id="choice-list" class="choice-list"></ol>
+                <div class="flip-prompt"><span>Tap card or press Space</span><strong>Reveal answer <span aria-hidden="true">↗</span></strong></div>
+              </div>
+              <div class="card-face card-back">
+                <div class="card-topline">
+                  <span>ANSWER</span>
+                  <span id="back-question-label">Q01</span>
+                </div>
+                <div class="answer-block">
+                  <span>Correct answer</span>
+                  <strong id="answer-text"></strong>
+                </div>
+                <div class="explanation-block">
+                  <span>WHY IT WORKS</span>
+                  <p id="explanation-text"></p>
+                </div>
+                <div class="flip-prompt"><span>Tap card or press Space</span><strong>Back to question <span aria-hidden="true">↙</span></strong></div>
+              </div>
+            </article>
+
+            <div class="deck-controls">
+              <button id="previous-button" class="nav-button" type="button"><span aria-hidden="true">←</span> Previous</button>
+              <button id="master-button" class="master-button" type="button"><span aria-hidden="true">✓</span> Mark mastered</button>
+              <button id="next-button" class="nav-button" type="button">Next <span aria-hidden="true">→</span></button>
+            </div>
+            <div class="progress-track" aria-hidden="true"><i id="progress-bar"></i></div>
+          </div>
+        </section>
+      </main>
+
+      <footer><span>Built for focused review.</span><span>Content from supplied CS 6250 question pools.</span></footer>
+    </div>
+
+    <!-- Add future module data files here; each pushes one module into FLASHCARD_MODULES. -->
+    <script src="data/module-1.js"></script>
+    <script src="data/module-2.js"></script>
+    <script src="data/module-3.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
