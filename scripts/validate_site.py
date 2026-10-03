@@ -8,7 +8,7 @@ root = Path(__file__).resolve().parents[1]
 prefix = "window.FLASHCARD_MODULES=window.FLASHCARD_MODULES||[];window.FLASHCARD_MODULES.push("
 
 total = 0
-for module_number, expected_count in ((1, 35), (2, 55), (3, 30)):
+for module_number, expected_count in ((1, 35), (2, 55), (3, 30), (4, 39), (5, 39), (6, 28)):
     source = (root / "data" / f"module-{module_number}.js").read_text(encoding="utf-8")
     assert source.startswith(prefix) and source.endswith(");\n")
     module = json.loads(source[len(prefix) : -3])
@@ -29,5 +29,5 @@ for module_number, expected_count in ((1, 35), (2, 55), (3, 30)):
     for topic in topics:
         print(f"  - {topic}")
 
-assert total == 120
+assert total == 226
 print(f"Validated {total} cards.")

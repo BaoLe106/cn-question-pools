@@ -55,6 +55,21 @@ MODULES = {
             26: "figure-bd209e69b983.jpeg",
         },
     },
+    4: {
+        "title": "AS Relationships & Interdomain Routing",
+        "accent": "#b66b25",
+        "images": {2: "figure-382f85312457.jpg", 3: "figure-6b047e04ee8b.png", 4: "figure-dfc74d335799.jpg", 7: "figure-dfc74d335799.jpg", 9: "figure-cdd475578d01.png", 10: "figure-1bc83642e16a.png", 12: "figure-dfc74d335799.jpg", 13: "figure-dfc74d335799.jpg", 14: "figure-17d91ca27e70.png", 16: "figure-0bb2220ba725.png", 17: "figure-2d41b2ea770e.jpg", 18: "figure-4519b7861819.png", 19: "figure-2669edb4788a.png", 20: "figure-52c5a2f819a1.png", 23: "figure-93c951e56f5e.png", 26: "figure-bb75e24711bc.png", 28: "figure-2999d086b41c.png", 29: "figure-5290d6a00510.jpg", 30: "figure-2071bf267b28.png"},
+    },
+    5: {
+        "title": "Router Design & Algorithms I",
+        "accent": "#2f7f76",
+        "images": {2: "figure-77a833829fbf.png", 6: "figure-3e1a3f26fbf2.jpg", 7: "figure-3e1a3f26fbf2.jpg", 10: "figure-952ad6b17c19.jpg", 11: "figure-70c1328395be.jpg", 13: "figure-a12765724627.png", 14: "figure-f0575cca4c02.png", 22: "figure-ed5995631439.jpg", 23: "figure-b9768a03f85d.png", 24: "figure-15c3a0195b91.png", 26: "figure-ed5995631439.jpg", 32: "figure-76e4ac915478.png", 33: "figure-29a7af4378c3.png", 34: "figure-60ecd2a79da6.png", 35: "figure-b4859dda0e62.png", 36: "figure-32fe5fd960b1.png", 37: "figure-32fe5fd960b1.png", 38: "figure-43340ccfc52a.png"},
+    },
+    6: {
+        "title": "Router Design & Algorithms II",
+        "accent": "#a84d73",
+        "images": {1: "figure-c91a6e2891e6.png", 2: "figure-32a48e8ec260.png", 3: "figure-dfd79b91bfb6.jpg", 5: "figure-5dd12ce47f0c.png", 7: "figure-5fd10184bd42.png", 8: "figure-876136f58f4f.jpg", 9: "figure-4c877687ede4.jpg", 10: "figure-b2bba0067b99.png", 11: "figure-6b27214ed294.png", 12: "figure-122778bd5fb4.png", 13: "figure-ff2505c76db7.png", 14: "figure-cb9cb6c1c699.png", 15: "figure-b1581f95a900.png", 16: "figure-560e8d270d74.png", 17: "figure-560e8d270d74.png", 18: "figure-dcf88ffcf5f3.png", 19: "figure-af2bc374d94c.png", 20: "figure-ac89116da903.png", 22: "figure-a3b10547c62a.jpg", 23: "figure-838bfab16e22.png", 26: "figure-6f07451343a8.png", 27: "figure-419410fe66ce.png", 28: "figure-c114189c5b4a.png"},
+    },
 }
 
 QUESTION_RE = re.compile(r"^Q(\d+)\.\s+\[(MCQ|TF)\]\s*$")
